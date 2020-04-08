@@ -22,7 +22,7 @@ exports.handler = async (event) => {
       user.age &&
       user.tel &&
       user.company &&
-      user.adress
+      user.address
     ) {
       const documentClient = new AWS.DynamoDB.DocumentClient({
         region: "eu-west-1",
@@ -36,7 +36,7 @@ exports.handler = async (event) => {
           lastname: user.lastname,
           tel: user.tel,
           company: user.company,
-          adress: user.adress,
+          address: user.adress,
         },
       };
       try {
